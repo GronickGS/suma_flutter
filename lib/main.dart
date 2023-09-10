@@ -7,14 +7,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+// Ros
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Suma',
-      debugShowCheckedModeBanner: false,
-      home: SumaPage());
+        title: 'Suma', debugShowCheckedModeBanner: false, home: SumaPage());
   }
 }
-

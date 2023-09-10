@@ -10,7 +10,7 @@ class SumaPage extends StatefulWidget {
 class _SumaPageState extends State<SumaPage> {
   TextEditingController num1 = TextEditingController();
   TextEditingController num2 = TextEditingController();
-  int resultado = 0;
+  double resultado = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,9 @@ class _SumaPageState extends State<SumaPage> {
             const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
-                int numero1 = int.tryParse(num1.text) ?? 0;
-                int numero2 = int.tryParse(num2.text) ?? 0;
-                int resul = numero1 + numero2;
+                double numero1 = double.tryParse(num1.text) ?? 0;
+                double numero2 = double.tryParse(num2.text) ?? 0;
+                double resul = numero1 + numero2;
                 setState(() {
                   resultado = resul;
                 });
