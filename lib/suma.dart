@@ -12,6 +12,15 @@ class _SumaPageState extends State<SumaPage> {
   TextEditingController num2 = TextEditingController();
   double resultado = 0;
 
+  void calcularSuma() {
+    double numero1 = double.tryParse(num1.text) ?? 0;
+    double numero2 = double.tryParse(num2.text) ?? 0;
+    double resul = numero1 + numero2;
+    setState(() {
+      resultado = resul;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,14 +43,7 @@ class _SumaPageState extends State<SumaPage> {
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
-              onPressed: () {
-                double numero1 = double.tryParse(num1.text) ?? 0;
-                double numero2 = double.tryParse(num2.text) ?? 0;
-                double resul = numero1 + numero2;
-                setState(() {
-                  resultado = resul;
-                });
-              },
+              onPressed: calcularSuma, // Llama a la función para calcular la suma
               child: const Text('Calcular'),
             ),
             const SizedBox(height: 16.0),
